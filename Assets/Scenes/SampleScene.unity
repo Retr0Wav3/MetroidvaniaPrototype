@@ -6869,7 +6869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e94c625eeec2c349a0029cce34ff956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1531483073}
 --- !u!114 &1531483072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6899,7 +6898,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1531483071}
-        m_MethodName: OnHorizontalMovement
+        m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6909,8 +6908,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 7d27fcb8-48b9-4a2c-96fc-2d43b10ed36b
-    m_ActionName: Movement/HorizontalMovement[/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
+    m_ActionId: cbb27478-e618-46fd-85d7-914edc7e6dc0
+    m_ActionName: Movement/WASD and Arrows[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Movement

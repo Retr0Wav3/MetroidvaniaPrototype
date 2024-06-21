@@ -13,9 +13,9 @@ namespace Scripts.Input
             TryGetComponent(out _player);
         }
 
-        public void OnHorizontalMovement(InputAction.CallbackContext context)
-        {
-            var direction = context.ReadValue<float>();
+        public void OnMove(InputAction.CallbackContext context)
+        { 
+            var direction = context.ReadValue<Vector2>();
             _player.SetMovementDirection(direction);
         }
     }

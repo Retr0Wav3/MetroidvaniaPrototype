@@ -7,14 +7,14 @@ namespace Scripts.Input
         [SerializeField] private float _speed;
         private Vector3 _directionVector;
         
-        public void SetMovementDirection(float direction)
+        public void SetMovementDirection(Vector3 direction)
         {
-            _directionVector.x = direction;
+            _directionVector = direction;
         }
 
         private void Update()
         {
-            if (_directionVector.x != 0)
+            if (_directionVector != Vector3.zero)
                 transform.position += _directionVector * (_speed * Time.deltaTime);
         }
     }
