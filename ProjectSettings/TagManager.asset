@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Background
-  - Level
+  - Ground
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
   - name: Level
     uniqueID: 3136350851
     locked: 0
-  - name: Units
+  - name: Characters
     uniqueID: 3151451747
+    locked: 0
+  - name: Environment/Props
+    uniqueID: 955026013
     locked: 0
