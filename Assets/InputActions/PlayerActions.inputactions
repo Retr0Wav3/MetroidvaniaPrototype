@@ -6,9 +6,17 @@
             "id": "99e29814-5727-43c5-bf02-ab9bca539a8b",
             "actions": [
                 {
-                    "name": "WASD and Arrows",
+                    "name": "Movement",
                     "type": "Value",
                     "id": "cbb27478-e618-46fd-85d7-914edc7e6dc0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Value",
+                    "id": "3a1da1af-113a-4ac3-bef9-fc80cec4fddb",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
@@ -16,112 +24,57 @@
             ],
             "bindings": [
                 {
-                    "name": "WASD",
-                    "id": "6276415e-7935-464e-98cc-72692b3deea6",
+                    "name": "2D Vector",
+                    "id": "db45f94c-5c3d-4695-b895-995154410dab",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASD and Arrows",
+                    "action": "Movement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "b2610109-2736-4ab3-a858-48f49ffa73e1",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "WASD and Arrows",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "7d2f9aee-2ff4-4ae5-a446-5ecb385932ae",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "WASD and Arrows",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "left",
-                    "id": "c51e71c9-f17a-49a2-988f-93696cb1d8d6",
+                    "id": "0c117bcf-0579-4bd0-988e-633d46cfa96c",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "WASD and Arrows",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "4a8ae0d0-fb92-403c-96b4-a9f2955edaaa",
+                    "id": "5882d4b7-2541-42fc-9e2d-e73f779974f3",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "WASD and Arrows",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Arrows",
-                    "id": "a9806875-9817-48d9-9622-048eb43599be",
+                    "name": "2D Vector",
+                    "id": "8ecc5cb5-637c-4c5f-8150-a3c89a0bfc46",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASD and Arrows",
+                    "action": "Jump",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "up",
-                    "id": "5e823b27-78cd-46e1-bffc-7f419ee9ffc9",
-                    "path": "<Keyboard>/upArrow",
+                    "id": "367ebc5a-068d-4490-9efa-db2735811265",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "WASD and Arrows",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "6093e38a-5036-45f8-98b1-ae3d31fe484d",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "WASD and Arrows",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "6b10fdd0-e845-45ff-805c-a76d69847a42",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "WASD and Arrows",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "8607dd48-a3ee-4a08-af97-308e5ce9a95d",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "WASD and Arrows",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
