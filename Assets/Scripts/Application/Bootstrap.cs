@@ -22,7 +22,7 @@ namespace Application
             _movementController = heroGameObject.GetComponent<MovementController>();
             _movementController.Init();
         
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
     }
 }
