@@ -1,26 +1,30 @@
 ﻿using Characters;
+using Cinemachine;
 using Systems.Movement;
 using UnityEngine;
-using Utils;
 
 namespace Application
 {
     public class Bootstrap : MonoBehaviour
     {
-        public GameObject playerPrefab;
-        public Transform playerSpawnPoint;
-    
+        [SerializeField] private Transform _playerSpawnPoint;
+        [SerializeField] private CinemachineVirtualCamera _virtualCamera;
+        
+        private GameObject _playerGameObject;
         private Player _player;
         private MovementController _movementController;
 
         private void Awake()
-        {
-            _player = new Player(4f, 13f);
-            ServiceLocator.RegisterAs(_player, typeof(Player));
-        
-            var heroGameObject = Instantiate(playerPrefab, playerSpawnPoint.position, playerSpawnPoint.rotation);
-            _movementController = heroGameObject.GetComponent<MovementController>();
+        { 
+            var playerPrefab = Resources.Load<GameObject>("Prefabs/Characters/Hero_0");
+            
+            _playerGameObject = Instantiate(playerPrefab, _playerSpawnPoint.position, _playerSpawnPoint.rotation);
+            _player = _playerGameObject.GetComponent<Player>();
+            _movementController = _playerGameObject.GetComponent<MovementController>();
+            
+            _player.Init();
             _movementController.Init();
+            _virtualCamera.Follow = _player.transform;
         
             //DontDestroyOnLoad(this);
         }
