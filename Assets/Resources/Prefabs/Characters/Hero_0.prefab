@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4435551760505590442}
   - component: {fileID: 4435551760505590440}
   - component: {fileID: 4435551760505590441}
+  - component: {fileID: 8775479266396975211}
   - component: {fileID: 4435551760505590485}
   m_Layer: 0
   m_Name: Hero_0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1143515549
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -6146700129834819302, guid: 02c997eb509fd714f95b0c7e70095415,
     type: 3}
@@ -185,6 +186,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &8775479266396975211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4435551760505590486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39876f7d42f44c67a8f20a862d345c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4
+  _jumpSpeed: 13
 --- !u!114 &4435551760505590485
 MonoBehaviour:
   m_ObjectHideFlags: 0
