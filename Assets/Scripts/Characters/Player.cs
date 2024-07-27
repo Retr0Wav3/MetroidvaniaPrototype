@@ -1,27 +1,28 @@
-﻿using Systems.Movement;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Characters
 {
-    public class Player : IMovable
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class Player : MonoBehaviour
     {
-        public float Speed { get; }
-        public float JumpSpeed { get; }
+        [SerializeField] private float _speed;
+        [SerializeField] private float _jumpSpeed;
         
-        public Player(float speed, float jumpSpeed)
+        private Rigidbody2D _rigidbody;
+        
+        public void Init()
         {
-            Speed = speed;
-            JumpSpeed = jumpSpeed;
+            _rigidbody = GetComponent<Rigidbody2D>();
         }
 
-        public void Move(Rigidbody2D rigidbody, Vector2 direction)
+        public void Move(Vector2 direction)
         {
-            rigidbody.velocity = new Vector2(direction.x * Speed, rigidbody.velocity.y);
+            _rigidbody.velocity = new Vector2(direction.x * _speed, _rigidbody.velocity.y);
         }
 
-        public void Jump(Rigidbody2D rigidbody)
+        public void Jump()
         {
-            rigidbody.AddForce(Vector2.up * JumpSpeed, ForceMode2D.Impulse);
+            _rigidbody.AddForce(Vector2.up * _jumpSpeed, ForceMode2D.Impulse);
         }
     }
 }

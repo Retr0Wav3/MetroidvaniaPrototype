@@ -1,18 +1,21 @@
-﻿using Systems.Movement;
+﻿using Characters;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(Collider2D))]
-public class SceneReloader : MonoBehaviour
+namespace Utils
 {
-    private string _sceneName;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    [RequireComponent(typeof(Collider2D))]
+    public class SceneReloader : MonoBehaviour
     {
-        if (other.TryGetComponent(out MovementController controller))
+        private string _sceneName;
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            _sceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(_sceneName);
+            if (other.TryGetComponent(out Player player))
+            {
+                _sceneName = SceneManager.GetActiveScene().name;
+                SceneManager.LoadScene(_sceneName);
+            }
         }
     }
 }

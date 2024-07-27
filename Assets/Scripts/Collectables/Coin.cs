@@ -1,3 +1,4 @@
+using Characters;
 using Systems.Movement;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace Collectables
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.TryGetComponent(out MovementController controller))
+            if (other.TryGetComponent(out Player player))
             {
                 Destroy(gameObject);
             }

@@ -5,12 +5,12 @@ using Utils;
 
 namespace Systems.Movement
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Player))]
     public class MovementController : MonoBehaviour
     {
         [SerializeField] LayerChecker _groundCheker;
         
-        private IMovable _player;
+        private Player _player;
         private Rigidbody2D _rigidbody;
         private Vector2 _moveDirection;
         private bool _isJumping;
@@ -18,19 +18,19 @@ namespace Systems.Movement
 
         public void Init()
         {
-            _player = ServiceLocator.Get<Player>();
+            _player = GetComponent<Player>();
             _rigidbody = GetComponent<Rigidbody2D>();
             _debugSphereOffset = _groundCheker.ColliderOffset;
         }
 
         public void FixedUpdate()
         {
-            _player.Move(_rigidbody, _moveDirection);
+            _player.Move(_moveDirection);
             
             if (_isJumping)
             {
                 if (IsGrounded())
-                    _player.Jump(_rigidbody);
+                    _player.Jump();
             }
             else if (_rigidbody.velocity.y > 0f)
             {
